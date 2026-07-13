@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Boxall</title>
         <style>
 /* Splash visible au départ */
@@ -20,9 +20,18 @@
     align-items:center;
     z-index:9999;
     font-size: 70px;
+text-align: center;
 }
 
-  
+    width:100%;
+ #champ{   width: 50%;
+
+           border:20px  ;
+
+
+
+
+  }
 /* Navigation cachée au départ */
 #navbar {
     display:none;
@@ -668,6 +677,27 @@ p{
 
 }
 
+input{
+
+    width:100%;
+
+    max-width:350px;
+
+    padding:15px;
+
+    margin:10px 0;
+
+    border:2px solid #d9d9d9;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:0.3s;
+
+}
             
         </style>
 
@@ -679,9 +709,13 @@ p{
 <section id="splash" class="page active ">
 
 <h1>Boxall</h1>
+
 <p>  Un seul réseau, tous vos appels </p>
+
+</div>
  <p1> developpé par Paulin TOMPOUDI     </p1>
-<div class="loader"></div>
+
+
 
 </section>
 
@@ -716,10 +750,10 @@ Créer un compte
 <h1>Créer un compte Boxall</h1>
 
 
-<input placeholder="Nom complet">
+<input id="champ" placeholder="Nom complet">
 
 
-<input placeholder="Numéro de téléphone">
+<input id="champ" placeholder="Numéro de téléphone">
 
 
 <input placeholder="Créer un mot de passe">
