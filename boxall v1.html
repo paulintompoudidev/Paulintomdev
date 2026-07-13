@@ -1,0 +1,1445 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        
+        <title>Boxall</title>
+        <style>
+/* Splash visible au départ */
+#splash {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:#008cff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    font-size: 70px;
+}
+
+  
+/* Navigation cachée au départ */
+#navbar {
+    display:none;
+}
+
+
+/* Quand le splash disparaît */
+#navbar.active {
+    display:flex;
+}
+
+            
+            body{background-color: #1684ff;
+            
+            }
+      
+           
+ /* Navigation cachée au départ */
+#navbar {
+    display:none;
+}
+
+
+/* Quand le splash disparaît */
+#navbar.active {
+    display:flex;
+}
+
+
+
+
+
+#appel{
+    text-align:center;
+}
+
+.appel-box{
+
+    margin-top:120px;
+
+}
+
+#numeroAppel{
+
+    margin:40px 0;
+
+    font-size:35px;
+
+}
+
+#chrono{
+
+    font-size:45px;
+
+    margin-bottom:50px;
+
+    font-weight:bold;
+
+}
+
+.raccrocher-btn{
+
+    width:220px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:red;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+            
+
+            
+            /* ================= ACCUEIL ================= */
+
+#accueil{  
+ text-align: center; font-size: 30px;
+
+
+ }
+
+
+
+
+
+.logaccueil{  text-align:center; }
+
+ 
+p{
+ font-size:29px; }
+ P1{  font-size:15px ; }
+
+
+
+
+
+
+
+/* écran */
+
+.screen{
+
+    width:100%;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:15px;
+
+    font-size:28px;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+/* clavier */
+
+.clavier{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+}
+
+.clavier button{
+
+    height:70px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#1684FF;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+/* bouton appel */
+
+.appel-btn{
+
+    width:100%;
+
+    margin-top:25px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#00C853;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+}
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            /* ===================== PAGES ===================== */
+
+.page{
+
+    display:none;
+
+    min-height:100vh;
+
+    padding:25px;
+
+    color:white;
+
+    padding-bottom:100px;
+
+}
+
+.page.active{
+
+    display:block;
+
+}
+            
+            
+            
+            
+          body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#1684FF;
+}
+
+/* Barre de navigation */
+
+.navbar{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:75px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    box-shadow:0 -3px 15px rgba(0,0,0,.2);
+
+    border-top-left-radius:20px;
+
+    border-top-right-radius:20px;
+
+}
+
+/* Boutons */
+
+.navbar button{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    color:#1684FF;
+
+    font-size:20px;
+
+}
+
+/* Texte */
+
+.navbar small{
+
+    font-size:11px;
+
+    margin-top:3px;
+
+}  
+        /* = pour les contactes== */
+        .contact{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+    padding:15px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+}
+
+.avatar{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#1684FF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+.info{
+
+    flex:1;
+
+    margin-left:18px;
+
+}
+
+.info h3{
+
+    margin-bottom:5px;
+
+}
+
+.info p{
+
+    opacity:.8;
+
+}
+
+.appel{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#00C853;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.appel:hover{
+
+    transform:scale(1.1);
+
+} /* pour les contactes fin */
+        
+        
+        
+        
+    
+        
+        /* pour le compte */
+         .page{
+
+    padding:25px;
+
+}
+
+.titre{
+
+    text-align:center;
+
+    color:white;
+
+    margin-bottom:25px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+.solde-card{
+
+    text-align:center;
+
+}
+
+.solde-card h1{
+
+    font-size:42px;
+
+    margin:15px 0;
+
+}
+
+.ligne{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+.btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    background:white;
+
+    color:#1684FF;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.recharge-btn{
+
+    background:#00C853;
+
+    color:white;
+
+}
+
+.abonnement-btn{
+
+    background:#FFD700;
+
+    color:black;
+
+}
+
+.paiement-btn{
+
+    background:#8E44AD;
+
+    color:white;
+
+}
+
+.assistance-btn{
+
+    background:#FF9800;
+
+    color:white;
+
+}
+
+.deconnexion-btn{
+
+    background:#FF3B30;
+
+    color:white;
+
+    margin-top:20px;
+
+}
+        /* pour le compte  fin */
+        
+        
+       
+        
+       
+        /* pour l'ecran dapel */
+        
+        .appel-box{
+
+    text-align:center;
+
+    color:white;
+
+    margin-top:60px;
+
+}
+
+.photo-contact{
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:50%;
+
+    border:5px solid white;
+
+}
+
+.numero{
+
+    margin-top:10px;
+
+    opacity:.8;
+
+}
+
+.etat{
+
+    margin-top:35px;
+
+}
+
+.chrono{
+
+    margin-top:20px;
+
+    font-size:35px;
+
+    font-weight:bold;
+
+}
+
+.actions{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.action{
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.action button{
+
+    width:70px;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+
+
+.action p{
+
+    margin-top:10px;
+
+}
+
+.raccrocher{
+
+    width:90px;
+
+    height:90px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#FF3B30;
+
+    color:white;
+
+    font-size:35px;
+
+    display:block;
+
+    margin:60px auto;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.raccrocher:hover{
+
+    transform:scale(1.1);
+
+}
+
+            
+        </style>
+
+    </head>
+    <body>
+    
+<!-- SPLASH -->
+
+<section id="splash" class="page active ">
+
+<h1>Boxall</h1>
+<p>  Un seul réseau, tous vos appels </p>
+ <p1> developpé par Paulin TOMPOUDI     </p1>
+<div class="loader"></div>
+
+</section>
+
+
+<!-- CONNEXION -->
+
+<section id="connexion" class="page ">
+
+<h1>Connexion</h1>
+
+<input placeholder="Numéro">
+
+<input placeholder="Mot de passe">
+
+<button onclick="ouvrirPage('accueil')">
+Connexion
+</button>
+
+<button onclick="ouvrirPage('inscription')">
+Créer un compte
+
+</button>
+
+
+
+</section>
+
+<!-- ===================== inscription ===================== -->
+
+<section id="inscription" class="page ">
+
+<h1>Créer un compte Boxall</h1>
+
+
+<input placeholder="Nom complet">
+
+
+<input placeholder="Numéro de téléphone">
+
+
+<input placeholder="Créer un mot de passe">
+
+
+<button onclick="ouvrirPage('accueil')">
+Créer mon compte
+</button>
+
+
+<button onclick="ouvrirPage('connexion')">
+J'ai déjà un compte
+</button>
+
+
+</section>
+
+
+
+
+     <!-- ===================== accueil===================== -->
+
+<section id="accueil" class="page "> 
+
+
+    <h1>BOXALL</h1>
+
+    <p>Composez un numéro</p>
+
+
+        
+    
+    <!-- Écran -->
+    <input
+        type="text"
+        id="numero"
+        class="screen"
+        readonly>
+
+    <!-- Clavier -->
+    <div class="clavier">
+
+        <button onclick="ajouter('1')">1</button>
+        <button onclick="ajouter('2')">2</button>
+        <button onclick="ajouter('3')">3</button>
+
+        <button onclick="ajouter('4')">4</button>
+        <button onclick="ajouter('5')">5</button>
+        <button onclick="ajouter('6')">6</button>
+
+        <button onclick="ajouter('7')">7</button>
+        <button onclick="ajouter('8')">8</button>
+        <button onclick="ajouter('9')">9</button>
+
+        <button onclick="ajouter('*')">*</button>
+        <button onclick="ajouter('0')">0</button>
+        <button onclick="effacer()">⌫</button>
+
+    </div>
+ 
+    <button class="appel-btn" onclick="appeler()">
+
+        📞 Appeler
+
+    </button>
+    </section>
+    
+    
+        
+    
+ <!-- ===================== ecran dappel===================== -->
+
+        
+    <section id="appel" class="page">
+ <div class="appel-box">
+        <h2 id="numeroAppel"></h2>
+        <img src="images/avatar.png">
+
+        <h2 class="etat">
+            📞 Appel en cours...
+        </h2>
+        <div id="chrono">00:00</div>
+       
+    </div>
+
+
+    <div class="actions">
+         <div class="action">
+
+            <button>🔇</button>
+
+            <p>Muet</p>
+
+        </div>
+
+        <div class="action">
+
+            <button>🔊</button>
+
+            <p>Haut-parleur</p>
+
+        </div>
+
+        <div class="action">
+
+            <button>⌨️</button>
+
+            <p>Clavier</p>
+
+        </div>
+
+        <div class="action">
+
+            <button>➕</button>
+
+            <p>Ajouter</p>
+
+        </div>
+
+    </div>
+
+  <button
+class="raccrocher"
+onclick="raccrocher()">
+
+🔴
+
+</button>
+    
+
+    </section>
+        
+        
+        <!-- =====================  contactes ===================== -->
+        
+       <section id="contacts" class="page">
+        
+
+    <h1 class="titre">📇 Contacts</h1>
+           
+<div class="card">
+
+    <input id="nomContact" class="champ" placeholder="Nom">
+<br><br>
+<input id="numeroContact" class="champ" placeholder="Numéro">
+
+    <br><br>
+
+   <button class="btn" onclick="ajouterContact()">
+    ➕ Ajouter
+</button>
+
+</div>
+    <input
+        type="search"
+        class="champ"
+        placeholder="Rechercher un contact...">
+<div id="listeContacts"></div>
+
+<div id="listeContacts"></div>
+    
+        </section>
+        
+        
+      
+        
+    
+          <!-- =====================  comptes ===================== -->
+
+<section id="compte" class="page">
+
+   
+
+    <h1 class="titre">Mon Compte</h1>
+
+    <!-- SOLDE -->
+
+    <div class="card solde-card">
+
+        <h3>💰 Solde actuel</h3>
+
+        <h1>1 500 FCFA</h1>
+
+        <button class="btn recharge-btn" onclick="ouvrirPage('recharge')">
+            Recharger mon compte
+        </button>
+
+    </div>
+
+
+    <!-- ASSISTANCE -->
+
+    <div class="card">
+
+        <div class="ligne">
+
+            <span>🎧 Assistance</span>
+
+            <span>24h/24</span>
+
+        </div>
+
+        <button class="btn assistance-btn" onclick="ouvrirPage('support')" >
+            Contacter le support
+        </button>
+
+    </div>
+
+
+   
+
+
+    <!-- DECONNEXION -->
+
+    <button class="btn deconnexion-btn" onclick="deconnexion()">
+        🚪 Déconnexion
+    </button>
+    
+    </section>
+    
+<!-- =====================  comptes ===================== -->
+
+
+
+<section id="recharge" class="page">
+
+
+    <h1 class="titre">💳 Recharger mon compte</h1>
+
+    <div class="card">
+
+        <label>Choisissez un opérateur</label>
+
+        <select class="champ">
+
+            <option>Télécel Money</option>
+            <option>Orange Money</option>
+            <option>Moov Money</option>
+
+        </select>
+
+    </div>
+
+    <div class="card">
+
+        <label>Montant</label>
+
+        <input
+        type="number"
+        class="champ"
+        placeholder="Ex : 1000 FCFA">
+
+    </div>
+
+    <div class="card">
+
+        <label>Numéro Mobile Money</label>
+
+        <input
+        type="tel"
+        class="champ"
+        placeholder="+226 XX XX XX XX">
+
+    </div>
+
+    <button class="btn recharge-btn">
+        💰 Recharger maintenant
+    </button>
+
+    <div class="card">
+
+        <h3>Montants rapides</h3>
+
+        <div class="montants">
+
+            <button class="mini-btn">500 F</button>
+
+            <button class="mini-btn">1000 F</button>
+
+            <button class="mini-btn">2000 F</button>
+
+            <button class="mini-btn">5000 F</button>
+
+        </div>
+
+     
+    </div>
+
+<button class="btn recharge-btn"onclick="ouvrirPage('compte')">
+        retour 
+    </button>
+
+
+    
+     </section>
+    
+<!-- =====================  comptes ===================== -->
+
+
+
+
+<section id="support" class="page">
+    <h1> Besoin d'aide ? </h1>
+
+<P> Notre équipe Boxall est disponible pour vous accompagner . </P>
+
+<button class="btn recharge-btn">
+        
+<a href="https://wa.me/22651414871">
+    Contacter sur WhatsApp
+</a> 
+    </button>
+
+<div>
+À propos de Boxall
+
+Boxall est une application de communication qui permet
+aux utilisateurs de rester connectés simplement,
+rapidement et efficacement.
+
+Notre objectif est de rapprocher les personnes
+en facilitant les appels entre différents réseaux
+grâce à la puissance d'Internet.
+
+Boxall : connecter les frontières, rapprocher les voix.
+</div>
+
+<button class="btn recharge-btn">
+
+<a href="tel:+22651414871">
+    Appeler Boxall
+</a> 
+
+    </button>
+
+<div>
+
+## Les Agents Boxall
+
+Les Agents Boxall sont des partenaires de proximité qui accompagnent les utilisateurs dans l'utilisation de nos services.
+
+Ils permettent notamment de :
+
+* aider à la création de comptes Boxall ;
+* accompagner les utilisateurs lors des recharges ;
+* expliquer le fonctionnement de l'application ;
+* apporter une assistance aux personnes ayant des difficultés avec les services numériques.
+
+Grâce aux Agents Boxall, chaque utilisateur peut bénéficier d'un accompagnement simple et accessible.
+
+## Tarification Boxall
+
+Boxall propose des services conçus pour rester accessibles à tous.
+
+Les tarifs peuvent varier selon :
+
+* le type d'abonnement choisi ;
+* la durée des appels ;
+* les offres promotionnelles disponibles.
+
+Nos objectifs sont de proposer une communication de qualité à un prix adapté aux besoins de nos utilisateurs.
+
+## Devenir Agent Boxall
+
+Toute personne souhaitant représenter Boxall peut devenir agent après validation de son profil.
+
+Les Agents Boxall bénéficient :
+
+* d'une visibilité dans leur zone ;
+* d'outils pour accompagner les utilisateurs ;
+* d'opportunités liées au développement du réseau Boxall.
+
+Boxall construit un réseau humain basé sur la proximité, la confiance et l'innovation.
+
+© 2026 Boxall Technologies — Tous droits réservés.
+
+
+
+
+
+</div>
+
+
+
+<button class="btn recharge-btn"onclick="ouvrirPage('compte')">
+        retour 
+    </button>
+</div>
+
+<div>
+© 2026 Boxall Technologies.
+
+Tous droits réservés.
+
+Version : 1.0.0
+
+Conditions d'utilisation
+
+Politique de confidentialité
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+    
+    <nav class="navbar">
+
+<button onclick="ouvrir('accueil')">
+📞
+<br>
+Appels
+</button>
+
+<button onclick="ouvrir('contacts')">
+👥
+<br>
+Contacts
+</button>
+
+<button onclick="ouvrir('compte')">
+💰
+<br>
+Compte
+</button>
+
+</nav>
+    
+   <script> 
+
+ 
+    
+    let contacts = [];
+
+function ajouterContact(){
+
+    let nom = document.getElementById("nomContact").value;
+    let numero = document.getElementById("numeroContact").value;
+
+    if(nom=="" || numero==""){
+
+        alert("Remplissez tous les champs");
+
+        return;
+
+    }
+
+    let contact = {
+
+        nom: nom,
+        numero: numero
+
+    };
+
+    contacts.push(contact);
+
+    afficherContacts();
+
+    document.getElementById("nomContact").value = "";
+    document.getElementById("numeroContact").value = "";
+
+}
+
+    let secondes = 0;
+let timer;
+
+
+function actualiserChrono(){
+
+    secondes++;
+
+    let minutes = Math.floor(secondes / 60);
+    let sec = secondes % 60;
+
+    if(minutes < 10){
+        minutes = "0" + minutes;
+    }
+
+    if(sec < 10){
+        sec = "0" + sec;
+    }
+
+    document.getElementById("chrono").innerText =
+        minutes + ":" + sec;
+}
+
+
+   function ouvrir(id){
+
+    // Cacher toutes les pages
+    let pages = document.querySelectorAll(".page");
+
+    pages.forEach(function(page){
+
+        page.classList.remove("active");
+
+    });
+
+    // Afficher la page demandée
+    document.getElementById(id).classList.add("active");
+
+} 
+    
+    
+    function effacer(){
+
+    let numero = document.getElementById("numero");
+
+    numero.value = numero.value.slice(0,-1);
+
+}
+
+
+
+function appeler(){
+
+    let numero = document.getElementById("numero").value;
+
+    if(numero==""){
+
+        alert("Composez un numéro");
+
+        return;
+
+;
+
+document.getElementById("chrono").innerText = "00:00";
+
+clearInterval(timer);
+
+timer = setInterval(actualiserChrono, 1000);
+
+
+
+
+
+    }
+
+    ouvrir("appel");
+
+    document.getElementById("numeroAppel").innerText = numero;
+
+    secondes = 0;
+
+    document.getElementById("chrono").innerText = "00:00";
+
+    clearInterval(timer);
+
+    timer = setInterval(actualiserChrono,1000);
+
+}
+
+function ajouterContact(){
+
+    let nom = document.getElementById("nomContact").value;
+
+    let numero = document.getElementById("numeroContact").value;
+
+    if(nom=="" || numero==""){
+
+        alert("Remplissez tous les champs");
+
+        return;
+
+    }
+
+    let contact={
+
+        nom:nom,
+
+        numero:numero
+
+    };
+
+    contacts.push(contact);
+
+    localStorage.setItem(
+        "contacts",
+        JSON.stringify(contacts)
+    );
+
+    afficherContacts();
+
+    document.getElementById("nomContact").value="";
+
+    document.getElementById("numeroContact").value="";
+
+}
+
+    
+ function ajouter(chiffre){
+
+  let ecran = document.getElementById("numero");
+
+    ecran.value += chiffre;
+
+}   
+    
+    
+    
+  function raccrocher(){
+
+    // Arrêter le chronomètre
+    clearInterval(timer);
+
+    // Remettre le temps à zéro
+    secondes = 0;
+    document.getElementById("chrono").innerText = "00:00";
+
+    // Vider les numéros
+    document.getElementById("numero").value = "";
+    document.getElementById("numeroAppel").innerText = "";
+
+    // Revenir à l'accueil
+    ouvrir("accueil");
+
+}  
+    
+    function afficherContacts(){
+
+    let liste = document.getElementById("listeContacts");
+
+    liste.innerHTML = "";
+
+    contacts.forEach(function(contact){
+
+        liste.innerHTML += `
+
+        <div class="contact">
+
+            <h3>${contact.nom}</h3>
+
+            <p>${contact.numero}</p>
+
+        </div>
+
+        `;
+
+    });
+
+}
+    
+    setTimeout(function(){
+
+ouvrirPage("connexion");
+
+},3000);
+
+
+    
+ function ouvrirPage(page){
+
+    let pages = document.querySelectorAll(".page");
+
+    pages.forEach(function(p){
+        p.classList.remove("active");
+    });
+
+
+    document.getElementById(page).classList.add("active");
+
+
+    if(page=="accueil" || page=="contacts" || page=="compte"){
+        document.querySelector(".navbar").style.display="flex";
+    }
+    else{
+        document.querySelector(".navbar").style.display="none";
+    }
+
+}  
+    window.onload = function(){
+
+    let splash = document.getElementById("splash");
+    let navbar = document.getElementById("navbar");
+
+
+    setTimeout(function(){
+
+        // cacher le splash
+        splash.style.display="none";
+
+
+        // afficher la navigation
+        navbar.classList.add("active");
+
+
+    },3000); // 3 secondes
+
+};
+    
+    function deconnexion(){
+
+    let confirmation = confirm(
+        "Voulez-vous vraiment vous déconnecter de Boxall ?"
+    );
+
+    if(confirmation){
+
+        // supprimer les informations de connexion
+        localStorage.removeItem("utilisateur");
+
+        // retourner à la connexion
+        window.location.href = "connexion.html";
+    }
+
+}
+    
+    
+    
+    
+    </script>
+    
+    
+    
+    
+    </body>
+</html>
